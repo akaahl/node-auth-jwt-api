@@ -8,8 +8,10 @@ dotenv.config();
 // connect to db
 const DB_DETAILS = process.env.DB_DETAILS;
 
-mongoose.connect(DB_DETAILS, { useNewUrlParser: true }, () =>
-  console.log("connected to db")
+mongoose.connect(
+  DB_DETAILS,
+  { useNewUrlParser: true, useUnifiedTopology: true },
+  () => console.log("connected to db")
 );
 
 // import routes
