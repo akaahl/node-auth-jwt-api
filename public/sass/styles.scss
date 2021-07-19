@@ -12,7 +12,8 @@ body {
   background: #171717;
   color: #39a2db;
 
-  h1 {
+  h1,
+  h2 {
     font-family: "Festive", sans-serif;
   }
 
@@ -50,6 +51,35 @@ body {
           text-decoration: none;
           color: #ffeac9;
         }
+      }
+    }
+  }
+
+  .hero-section {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 0 8rem;
+
+    img {
+      transform: scale(0.8);
+    }
+
+    .text-content {
+      //   width: 40%;
+      margin: 4rem 4rem 0 0;
+
+      h2 {
+        color: #ff96ad;
+        font-size: 2.5rem;
+      }
+
+      p {
+        font-family: "Roboto", sans-serif;
+        color: #ffeac9;
+        line-height: 1.5;
+        margin: 1rem 0;
       }
     }
   }

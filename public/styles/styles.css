@@ -11,7 +11,8 @@ body {
   background: #171717;
   color: #39a2db;
 }
-body h1 {
+body h1,
+body h2 {
   font-family: "Festive", sans-serif;
 }
 body .navbar {
@@ -45,6 +46,29 @@ body .navbar ul li.sign-up:hover {
 body .navbar ul li a {
   text-decoration: none;
   color: #ffeac9;
+}
+body .hero-section {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 0 8rem;
+}
+body .hero-section img {
+  transform: scale(0.8);
+}
+body .hero-section .text-content {
+  margin: 4rem 4rem 0 0;
+}
+body .hero-section .text-content h2 {
+  color: #ff96ad;
+  font-size: 2.5rem;
+}
+body .hero-section .text-content p {
+  font-family: "Roboto", sans-serif;
+  color: #ffeac9;
+  line-height: 1.5;
+  margin: 1rem 0;
 }
 
 /*# sourceMappingURL=styles.css.map */
