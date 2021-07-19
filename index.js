@@ -29,7 +29,7 @@ app.use(express.static("public"));
 // set view engine
 app.set("view engine", "ejs");
 
-app.get("/", (req, res) => res.render("home"));
+app.get("/", (req, res) => res.render("home", { title: "Homepage" }));
 
 // add route middleware
 app.use("/api/user", authRoute);

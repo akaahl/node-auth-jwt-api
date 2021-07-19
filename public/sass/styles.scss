@@ -15,4 +15,42 @@ body {
   h1 {
     font-family: "Festive", sans-serif;
   }
+
+  .navbar {
+    width: 100%;
+    padding: 1rem 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    h1 {
+      font-size: 4rem;
+    }
+
+    ul {
+      list-style: none;
+      display: flex;
+      align-items: center;
+
+      li {
+        font-family: "Roboto", sans-serif;
+        font-weight: 600;
+        font-size: 1.2rem;
+        margin-left: 20px;
+        padding: 0.8rem 1.3rem;
+        border-radius: 2rem;
+        border: 2px solid transparent;
+
+        &.sign-up:hover {
+          border: 2px solid #ffeac9;
+          transition: border 0.3s ease-in;
+        }
+
+        a {
+          text-decoration: none;
+          color: #ffeac9;
+        }
+      }
+    }
+  }
 }

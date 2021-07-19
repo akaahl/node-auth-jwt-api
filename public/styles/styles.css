@@ -14,5 +14,37 @@ body {
 body h1 {
   font-family: "Festive", sans-serif;
 }
+body .navbar {
+  width: 100%;
+  padding: 1rem 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+body .navbar h1 {
+  font-size: 4rem;
+}
+body .navbar ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+body .navbar ul li {
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin-left: 20px;
+  padding: 0.8rem 1.3rem;
+  border-radius: 2rem;
+  border: 2px solid transparent;
+}
+body .navbar ul li.sign-up:hover {
+  border: 2px solid #ffeac9;
+  transition: border 0.3s ease-in;
+}
+body .navbar ul li a {
+  text-decoration: none;
+  color: #ffeac9;
+}
 
 /*# sourceMappingURL=styles.css.map */
