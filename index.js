@@ -3,7 +3,7 @@ const app = express();
 const dotenv = require("dotenv");
 const mongoose = require("mongoose");
 const authRoute = require("./routes/auth");
-const bodyParser = require("body-parser");
+const postRoute = require("./routes/posts");
 
 dotenv.config();
 
@@ -21,5 +21,6 @@ app.use(express.json());
 
 // add route middleware
 app.use("/api/user", authRoute);
+app.use("/api/user/posts", postRoute);
 
 app.listen(3000, () => console.log("Server up and running"));
