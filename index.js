@@ -10,17 +10,27 @@ dotenv.config();
 // connect to db
 const DB_DETAILS = process.env.DB_DETAILS;
 
-mongoose.connect(
-  DB_DETAILS,
-  { useNewUrlParser: true, useUnifiedTopology: true },
-  () => console.log("connected to db")
-);
+mongoose
+  .connect(DB_DETAILS, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true,
+  })
+  .then((result) => {
+    app.listen(3000);
+    console.log("server up and running");
+  })
+  .catch((err) => console.log(err));
 
 // middlewares
 app.use(express.json());
+app.use(express.static("public"));
+
+// set view engine
+app.set("view engine", "ejs");
+
+app.get("/", (req, res) => res.render("home"));
 
 // add route middleware
 app.use("/api/user", authRoute);
 app.use("/api/user/posts", postRoute);
-
-app.listen(3000, () => console.log("Server up and running"));
