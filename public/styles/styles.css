@@ -54,11 +54,24 @@ body .hero-section {
   justify-content: space-between;
   padding: 0 8rem;
 }
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-30px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 body .hero-section img {
-  transform: scale(0.8);
+  animation: float 1.5s linear infinite;
+  height: 500px;
+  width: 400px;
 }
 body .hero-section .text-content {
-  margin: 4rem 4rem 0 0;
+  margin: 4rem 4rem 0 4rem;
 }
 body .hero-section .text-content h2 {
   color: #ff96ad;
