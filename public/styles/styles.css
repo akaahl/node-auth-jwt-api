@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Festive&family=Roboto:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Festive&family=Quicksand:wght@300;400;500;600;700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -9,7 +9,7 @@ body {
   width: 100%;
   height: 100vh;
   background: #171717;
-  color: #39a2db;
+  color: #ff96ad;
 }
 body h1,
 body h2 {
@@ -31,8 +31,8 @@ body .navbar ul {
   align-items: center;
 }
 body .navbar ul li {
-  font-family: "Roboto", sans-serif;
-  font-weight: 600;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 800;
   font-size: 1.2rem;
   margin-left: 20px;
   padding: 0.8rem 1.3rem;
@@ -40,19 +40,19 @@ body .navbar ul li {
   border: 2px solid transparent;
 }
 body .navbar ul li.sign-up:hover {
-  border: 2px solid #ffeac9;
+  border: 2px solid #eeeeee;
   transition: border 0.3s ease-in;
 }
 body .navbar ul li a {
   text-decoration: none;
-  color: #ffeac9;
+  color: #eeeeee;
 }
 body .hero-section {
   width: 100%;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  padding: 0 8rem;
+  padding: 0 8rem 0 8rem;
 }
 @keyframes float {
   0% {
@@ -71,17 +71,18 @@ body .hero-section img {
   width: 400px;
 }
 body .hero-section .text-content {
-  margin: 4rem 4rem 0 4rem;
+  margin: 6rem 4rem 0 10rem;
 }
 body .hero-section .text-content h2 {
   color: #ff96ad;
-  font-size: 2.5rem;
+  font-size: 3rem;
 }
 body .hero-section .text-content p {
   font-family: "Roboto", sans-serif;
-  color: #ffeac9;
+  color: #eeeeee;
   line-height: 1.5;
   margin: 1rem 0;
+  font-size: 1.2rem;
 }
 
 /*# sourceMappingURL=styles.css.map */
