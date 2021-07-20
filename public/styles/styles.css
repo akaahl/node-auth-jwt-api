@@ -32,7 +32,6 @@ body .navbar ul {
 }
 body .navbar ul li {
   font-family: "Quicksand", sans-serif;
-  font-weight: 800;
   font-size: 1.2rem;
   margin-left: 20px;
   padding: 0.8rem 1.3rem;
@@ -46,6 +45,7 @@ body .navbar ul li.sign-up:hover {
 body .navbar ul li a {
   text-decoration: none;
   color: #eeeeee;
+  font-weight: 700;
 }
 body .hero-section {
   width: 100%;
@@ -78,23 +78,33 @@ body .hero-section .text-content h2 {
   font-size: 3rem;
 }
 body .hero-section .text-content p {
-  font-family: "Roboto", sans-serif;
+  font-family: "Quicksand", sans-serif;
   color: #eeeeee;
   line-height: 1.5;
   margin: 1rem 0;
   font-size: 1.2rem;
+  font-weight: 700;
 }
 body .tutorials-content {
-  margin-top: 2rem;
+  margin-top: 1.5rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  grid-gap: 4rem;
 }
 body .tutorials-content section {
   display: flex;
   flex-direction: column;
   align-items: center;
+  cursor: pointer;
+}
+body .tutorials-content section h4 {
+  font-family: "Quicksand", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #ff96ad;
 }
 body .tutorials-content section img {
+  margin-top: 1rem;
   height: 150px;
   width: 150px;
 }
