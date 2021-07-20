@@ -22,7 +22,11 @@ body .navbar {
   align-items: center;
   justify-content: space-between;
 }
-body .navbar h1 {
+body .navbar a {
+  text-decoration: none;
+  color: #ff96ad;
+}
+body .navbar a h1 {
   font-size: 4rem;
 }
 body .navbar ul {
@@ -148,6 +152,17 @@ body form .password input[type=password] {
   padding-left: 10px;
   color: #171717;
   font-weight: 700;
+}
+body form button {
+  margin-top: 1rem;
+  background: #ff96ad;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  color: #171717;
 }
 
 /*# sourceMappingURL=styles.css.map */
