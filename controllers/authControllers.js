@@ -12,7 +12,7 @@ module.exports.signup_post = async (req, res, next) => {
     const user = await User.create({ email, password });
     res.status(201).json({ user: user._id });
   } catch (err) {
-    console.log(err);
+    console.log(err.code);
   }
 };
 
