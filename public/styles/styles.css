@@ -108,5 +108,46 @@ body .tutorials-content section img {
   height: 150px;
   width: 150px;
 }
+body form {
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 400px;
+}
+body form h2 {
+  color: #eeeeee;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+}
+body form .email,
+body form .password {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  margin-bottom: 2rem;
+}
+body form .email label,
+body form .password label {
+  font-family: "Quicksand", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 5px;
+  color: #eeeeee;
+}
+body form .email input[type=email],
+body form .email input[type=password],
+body form .password input[type=email],
+body form .password input[type=password] {
+  background: #eeeeee;
+  border: none;
+  border-radius: 3px;
+  height: 1.6rem;
+  padding-left: 10px;
+  color: #171717;
+  font-weight: 700;
+}
 
 /*# sourceMappingURL=styles.css.map */

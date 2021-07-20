@@ -126,4 +126,48 @@ body {
       }
     }
   }
+
+  form {
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // justify-content: center;
+    height: 400px;
+
+    h2 {
+      color: #eeeeee;
+      font-family: "Quicksand", sans-serif;
+      font-weight: 700;
+      font-size: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    .email,
+    .password {
+      display: flex;
+      flex-direction: column;
+      width: 25%;
+      margin-bottom: 2rem;
+
+      label {
+        font-family: "Quicksand", sans-serif;
+        font-size: 1rem;
+        font-weight: 700;
+        margin-bottom: 5px;
+        color: #eeeeee;
+      }
+
+      input[type="email"],
+      input[type="password"] {
+        background: #eeeeee;
+        border: none;
+        border-radius: 3px;
+        height: 1.6rem;
+        padding-left: 10px;
+        color: #171717;
+        font-weight: 700;
+      }
+    }
+  }
 }

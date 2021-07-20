@@ -3,6 +3,7 @@ const app = express();
 const dotenv = require("dotenv");
 const mongoose = require("mongoose");
 const authRoute = require("./routes/auth");
+const authRoutes = require("./routes/authRoutes");
 const postRoute = require("./routes/posts");
 
 dotenv.config();
@@ -37,3 +38,4 @@ app.get("/tutorials", (req, res) =>
 // add route middleware
 app.use("/api/user", authRoute);
 app.use("/api/user/posts", postRoute);
+app.use("/", authRoutes);
