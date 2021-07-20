@@ -84,5 +84,19 @@ body .hero-section .text-content p {
   margin: 1rem 0;
   font-size: 1.2rem;
 }
+body .tutorials-content {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+body .tutorials-content section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body .tutorials-content section img {
+  height: 150px;
+  width: 150px;
+}
 
 /*# sourceMappingURL=styles.css.map */
