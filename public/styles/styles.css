@@ -153,6 +153,13 @@ body form .password input[type=password] {
   color: #171717;
   font-weight: 700;
 }
+body form .email .email-error,
+body form .email .password-error,
+body form .password .email-error,
+body form .password .password-error {
+  margin-top: 5px;
+  font-family: "Quicksand", sans-serif;
+}
 body form button {
   margin-top: 1rem;
   background: #ff96ad;

@@ -173,6 +173,12 @@ body {
         color: #171717;
         font-weight: 700;
       }
+
+      .email-error,
+      .password-error {
+        margin-top: 5px;
+        font-family: "Quicksand", sans-serif;
+      }
     }
 
     button {
