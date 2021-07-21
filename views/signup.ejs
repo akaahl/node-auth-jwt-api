@@ -8,15 +8,15 @@
         <h2>Sign Up</h2>
 
         <div class="email">
-            <label for="email">Email:</label>
-        <input type="email" name="email" required>
-        <div class="email-error"></div>
+          <label for="email">Email:</label>
+          <input type="email" name="email" required>
+          <div class="email-error"></div>
         </div>
 
        <div class="password">
-            <label for="password">Password:</label>
-        <input type="password" name="password" required>
-        <div class="password-error"></div>
+          <label for="password">Password:</label>
+          <input type="password" name="password" required>
+          <div class="password-error"></div>
        </div>
 
         <button>Register</button>
@@ -35,8 +35,6 @@
       const email = form.email.value;
       const password = form.password.value;
 
-      console.log(email, password)
-
       try {
         const res = await fetch("/signup", {
         method: "POST",
@@ -45,10 +43,10 @@
       });
 
         const data = await res.json();
-        console.log(data)
         if (data.errors) {
           emailError.textContent = data.errors.email;
           passwordError.textContent = data.errors.password;
+
         }
 
         if (data.user) {
