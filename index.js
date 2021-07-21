@@ -1,10 +1,9 @@
 const express = require("express");
 const app = express();
 const dotenv = require("dotenv");
+const cookieParser = require("cookie-parser");
 const mongoose = require("mongoose");
-const authRoute = require("./routes/auth");
 const authRoutes = require("./routes/authRoutes");
-const postRoute = require("./routes/posts");
 
 dotenv.config();
 
@@ -26,6 +25,7 @@ mongoose
 // middlewares
 app.use(express.json());
 app.use(express.static("public"));
+app.use(cookieParser());
 
 // set view engine
 app.set("view engine", "ejs");
@@ -36,6 +36,4 @@ app.get("/tutorials", (req, res) =>
 );
 
 // add route middleware
-app.use("/api/user", authRoute);
-app.use("/api/user/posts", postRoute);
 app.use("/", authRoutes);
