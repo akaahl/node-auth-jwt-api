@@ -2,9 +2,9 @@ const jwt = require("jsonwebtoken");
 const User = require("../models/User");
 
 const requireAuth = (req, res, next) => {
-  const token = res.cookies.jwt;
+  const token = req.cookies.jwt;
 
-  // check whether jwt token exits or not
+  // check whether jwt token exists or not
   if (token) {
     jwt.verify(token, process.env.TOKEN_SECRET, (err, decodedToken) => {
       if (err) {
