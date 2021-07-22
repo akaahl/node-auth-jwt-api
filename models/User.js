@@ -18,10 +18,10 @@ const userSchema = new mongoose.Schema({
 });
 
 // fire a function after the user has been saved to db
-userSchema.post("save", function (doc, next) {
-  console.log("A new user has been created", doc);
-  next();
-});
+// userSchema.post("save", function (doc, next) {
+//   console.log("A new user has been created", doc);
+//   next();
+// });
 
 // fire a function before a user is saved to db
 userSchema.pre("save", async function (next) {
@@ -37,10 +37,11 @@ userSchema.statics.login = async function (email, password) {
   const user = await this.findOne({ email });
 
   if (user) {
-    const auth = bcrypt.compare(password, user.password);
-    console.log(password, user.password);
+    const auth = await bcrypt.compare(password, user.password);
 
     if (auth) {
+      console.log(true);
+
       return user;
     }
 
