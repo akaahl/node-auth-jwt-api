@@ -4,6 +4,7 @@ const dotenv = require("dotenv");
 const cookieParser = require("cookie-parser");
 const mongoose = require("mongoose");
 const authRoutes = require("./routes/authRoutes");
+const { requireAuth, checkUser } = require("./middleware/authMiddleware");
 
 dotenv.config();
 
@@ -30,8 +31,9 @@ app.use(cookieParser());
 // set view engine
 app.set("view engine", "ejs");
 
+app.get("*", checkUser);
 app.get("/", (req, res) => res.render("home", { title: "Homepage" }));
-app.get("/tutorials", (req, res) =>
+app.get("/tutorials", requireAuth, (req, res) =>
   res.render("tutorials", { title: "Tutorials" })
 );
 

@@ -5,23 +5,22 @@
     <%- include('partials/nav') %>
 
     <form>
-        <h2>Log In</h2>
+      <h2>Log In</h2>
 
-        <div class="email">
-          <label for="email">Email:</label>
-          <input type="email" name="email" required>
-          <div class="email-error"></div>
-        </div>
+      <div class="email">
+        <label for="email">Email:</label>
+        <input type="email" name="email" required />
+        <div class="email-error"></div>
+      </div>
 
-       <div class="password">
-          <label for="password">Password:</label>
-          <input type="password" name="password" required>
-          <div class="password-error"></div>
-       </div>
+      <div class="password">
+        <label for="password">Password:</label>
+        <input type="password" name="password" required />
+        <div class="password-error"></div>
+      </div>
 
-        <button>Log In</button>
+      <button>Log In</button>
     </form>
-    </div>
 
     <script>
       const form = document.querySelector("form");
@@ -38,7 +37,6 @@
         const email = form.email.value;
         const password = form.password.value;
 
-
         try {
           const res = await fetch("/login", {
             method: "POST",
@@ -54,11 +52,8 @@
           }
 
           if (data.user) {
-            console.log(data.user);
             location.assign("/");
           }
-
-          // console.log(data);
         } catch (err) {
           console.log(err);
         }
